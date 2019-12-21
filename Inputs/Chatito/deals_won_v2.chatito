@@ -1,0 +1,73 @@
+# First, indicate how many inputs we want to create, and then create the structures of the inputs.
+# Example structure: *["percentageNumberOfSentencesWithThisStructure"] ~["name_context"(if ? then optional)] @["name_slot"(if ? then optional)]
+%[inputs]('training': '1500', 'testing': '600')
+    *[4%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Month?] @[Year?]
+    *[5%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Country?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Country?]
+    *[5%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Year?] @[Month?]
+    *[5%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Year?] @[Country?] @[Month?]
+    *[5%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Year?] @[Month?] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Year?] @[Month?] ~[deals] ~[won]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Country?] @[Year?] ~[deals] ~[won]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Month?] @[Year?] ~[deals] ~[won]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] @[Month?] @[Country?] ~[deals] ~[won]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Year?] @[Country?] ~[deals] ~[won]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] @[Country?] @[Month?] ~[deals] ~[won]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Year?] ~[deals] ~[won] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] @[Month?] ~[deals] ~[won] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Country?] ~[deals] ~[won] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Month?] ~[deals] ~[won] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] @[Country?] ~[deals] ~[won] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Year?] ~[deals] ~[won] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] ~[deals] ~[won] @[Year?] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] ~[deals] ~[won] @[Month?] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] ~[deals] ~[won] @[Month?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] ~[deals] ~[won] @[Country?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] ~[deals] ~[won] @[Year?] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] ~[deals] ~[won] @[Country?] @[Month?]
+
+# Second, put some synonims for each block. 
+
+~[please]
+    please
+    pls
+
+~[say]
+    say
+    tell
+    get
+    show
+
+@[Country]
+    in
+    to
+    for the
+    at
+
+@[Month]
+    in
+    on
+    during
+
+@[Year]
+    in
+    in the
+    for
+    during
+
+~[deals]
+    deals
+    agreement
+    transaction
+    treatment
+    acordance
+    accord
+
+~[won]
+    win
+    won
+    have won
+    have earned
+    earned
+    earn
+    gain

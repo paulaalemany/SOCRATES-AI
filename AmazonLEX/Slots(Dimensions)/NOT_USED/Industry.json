@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "Industry",
+    "version": "2",
+    "enumerationValues": [
+      {
+        "value": "Construction",
+        "synonyms": []
+      },
+      {
+        "value": "Financial Services",
+        "synonyms": []
+      },
+      {
+        "value": "Health",
+        "synonyms": []
+      },
+      {
+        "value": "Wholesale trade",
+        "synonyms": []
+      },
+      {
+        "value": "Professional, scientific and technical services",
+        "synonyms": []
+      },
+      {
+        "value": "Manufacturing",
+        "synonyms": []
+      }
+    ],
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+  }
+}

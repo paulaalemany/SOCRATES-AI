@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "Territory",
+    "version": "1",
+    "enumerationValues": [
+      {
+        "value": "Minas Gerais",
+        "synonyms": []
+      },
+      {
+        "value": "Brasília",
+        "synonyms": []
+      },
+      {
+        "value": "Sajonia",
+        "synonyms": []
+      },
+      {
+        "value": "Rio Grande do Norte",
+        "synonyms": []
+      },
+      {
+        "value": "St. Petesburg",
+        "synonyms": []
+      },
+      {
+        "value": "Waterloo",
+        "synonyms": []
+      },
+      {
+        "value": "Pekin",
+        "synonyms": []
+      },
+      {
+        "value": "Touluse",
+        "synonyms": []
+      },
+      {
+        "value": "Lleida",
+        "synonyms": []
+      },
+      {
+        "value": "Moscu",
+        "synonyms": []
+      },
+      {
+        "value": "Tarragona",
+        "synonyms": []
+      },
+      {
+        "value": "Baviera",
+        "synonyms": []
+      },
+      {
+        "value": "Girona",
+        "synonyms": []
+      },
+      {
+        "value": "Rio Grande do Sul",
+        "synonyms": []
+      },
+      {
+        "value": "Ribeirão Preto",
+        "synonyms": []
+      },
+      {
+        "value": "New York",
+        "synonyms": []
+      },
+      {
+        "value": "Barcelona",
+        "synonyms": []
+      },
+      {
+        "value": "Berlin",
+        "synonyms": []
+      },
+      {
+        "value": "Quebec",
+        "synonyms": []
+      },
+      {
+        "value": "Lyon",
+        "synonyms": []
+      },
+      {
+        "value": "Rio de Janeiro",
+        "synonyms": []
+      },
+      {
+        "value": "British Columbia",
+        "synonyms": []
+      },
+      {
+        "value": "California",
+        "synonyms": []
+      },
+      {
+        "value": "Sao Paulo",
+        "synonyms": []
+      },
+      {
+        "value": "Nova Scotia",
+        "synonyms": []
+      },
+      {
+        "value": "Illinois",
+        "synonyms": []
+      },
+      {
+        "value": "Taiwan",
+        "synonyms": []
+      },
+      {
+        "value": "Macao",
+        "synonyms": []
+      },
+      {
+        "value": "Ohio",
+        "synonyms": []
+      },
+      {
+        "value": "Parana",
+        "synonyms": []
+      },
+      {
+        "value": "Ontario",
+        "synonyms": []
+      },
+      {
+        "value": "Paris",
+        "synonyms": []
+      },
+      {
+        "value": "Campinas",
+        "synonyms": []
+      }
+    ],
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+  }
+}

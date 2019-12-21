@@ -1,0 +1,73 @@
+# First, indicate how many inputs we want to create, and then create the structures of the inputs.
+# Example structure: *["percentageNumberOfSentencesWithThisStructure"] ~["name_context"(if ? then optional)] @["name_slot"(if ? then optional)]
+%[inputs]('training': '1500', 'testing': '600')
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] ~[numberOf] ~[opportunities] @[Month?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] ~[numberOf] ~[opportunities] @[Month?] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] ~[numberOf] ~[opportunities] @[Year?] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] ~[numberOf] ~[opportunities] @[Year?] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] ~[numberOf] ~[opportunities] @[Country?] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] ~[numberOf] ~[opportunities] @[Country?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Month?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Country?] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Year?] @[Month?] @[Country?]
+    *[5%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Country?] @[Year?] 
+    *[5%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Year?] @[Month?] @[Country?]
+    *[5%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Month?] @[Year?] ~[numberOf] ~[opportunities]
+    *[5%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Month?] @[Year?] ~[numberOf] ~[opportunities]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Month?] @[Year?] ~[numberOf] ~[opportunities]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Year?] ~[numberOf] ~[opportunities] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Country?] ~[numberOf] ~[opportunities] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] @[Month?] ~[numberOf] ~[opportunities] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Year?] @[Country?] ~[numberOf] ~[opportunities] @[Month?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Month?] ~[numberOf] ~[opportunities] @[Year?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Year?] ~[numberOf] ~[opportunities] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Year?] ~[numberOf] ~[opportunities] @[Country?]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Year?] @[Country?] ~[numberOf] ~[opportunities]
+    *[4%] ~[hi?] ~[please?] ~[say?] @[Month?] @[Year?] @[Country?] ~[numberOf] ~[opportunities]
+
+# Second, put some synonims for each block. 
+
+~[please]
+    please
+    pls
+
+~[say]
+    say
+    tell
+    get
+    show
+
+@[Country]
+    in
+    to
+    for the
+    at
+
+@[Month]
+    in
+    on
+    during
+
+@[Year]
+    in
+    in the
+    for
+    during
+
+~[numberOf]
+    number of
+    number
+    how many
+    total
+    total of
+    sum
+    sum of
+    count of
+    count
+
+~[opportunities]
+    opportunities
+    chance
+    chances
+    possibility

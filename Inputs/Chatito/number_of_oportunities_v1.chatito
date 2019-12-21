@@ -1,0 +1,111 @@
+# First, indicate how many inputs we want to create, and then create the structures of the inputs.
+# Example structure: *["percentageNumberOfSentencesWithThisStructure"] ~["name_context"(if ? then optional)] @["name_slot"(if ? then optional)]
+%[inputs]('training': '1500', 'testing': '600')
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Country?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Country?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Customer?] @[Country?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Country?] @[Industry?] @[Territory?] 
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Country?] @[Territory?] 
+    *[3%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Country?] 
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Customer?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?] 
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Country?] @[Customer?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?] 
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Customer?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Employee_Responsible?] @[Country?] @[Month?] @[Year?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Country?] @[Territory?] @[Month?] @[Year?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Month?] @[Year?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[3%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Country?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Customer?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Employee_Responsible?] @[Country?] @[Month?] @[Year?] @[Industry?] @[Territory?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Industry?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Industry?] @[Territory?] @[Month?] @[Year?] @[Employee_Responsible?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Territory?] @[Industry?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Month?] @[Country?] @[Year?] @[Industry?] @[Employee_Responsible?] @[Customer?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Country?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Industry?] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Employee_Responsible?] @[Territory?] @[Country?] @[Month?] @[Year?] @[Industry?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Territory?] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Industry?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Industry?] @[Employee_Responsible?] @[Month?] @[Year?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[numberOf] ~[opportunities] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?] @[Employee_Responsible?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] ~[numberOf] ~[opportunities] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?] @[Employee_Responsible?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] ~[numberOf] ~[opportunities] @[Month?] @[Year?] @[Territory?] @[Country?] @[Employee_Responsible?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Industry?] @[Month?] @[Year?] ~[numberOf] ~[opportunities] @[Employee_Responsible?] @[Customer?] @[Territory?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Industry?] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] ~[numberOf] ~[opportunities] @[Territory?] @[Customer?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Employee_Responsible?] @[Territory?] @[Country?] @[Month?] @[Year?] @[Industry?] ~[numberOf] ~[opportunities] @[Customer?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Territory?] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] ~[numberOf] ~[opportunities] @[Industry?] @[Country?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Country?] @[Territory?] ~[numberOf] ~[opportunities]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] ~[numberOf] ~[opportunities] @[Country?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Employee_Responsible?] @[Month?] @[Year?] @[Country?] ~[numberOf] ~[opportunities] @[Territory?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?] ~[numberOf] ~[opportunities] @[Employee_Responsible?]
+
+# Second, put some synonims for each block. 
+
+~[please]
+    please
+    pls
+
+~[say]
+    say
+    tell
+    get
+    show
+
+@[Country]('entity': 'location')
+    in
+
+@[Month]
+    in
+
+@[Year]
+    in
+
+@[Customer]
+    to the customer
+    to customer
+    for customer
+    for the customer
+    for
+    to
+
+@[Employee_Responsible]
+    by the employee
+    by
+    by employee
+    for the employee
+    of the employee
+    for
+
+@[Industry]
+    in the
+
+@[Territory]
+    in
+
+~[numberOf]
+    number of
+    number
+    how many
+    total
+    total of
+    sum
+    sum of
+    count of
+    count
+
+~[opportunities]
+    opportunities
+    chance
+    chances
+    possibility
+
+~[Brasil]('synonym': 'true')
+    brasil
+    br

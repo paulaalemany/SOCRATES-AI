@@ -1,0 +1,23 @@
+[{
+    "connectionLimit" : 8,
+    "connectTimeout"  : 3600000,
+    "acquireTimeout"  : 3600000,
+    "timeout"       : 3600000,
+    "queueLimit" : 0,
+    "host"     : "remotemysql.com",
+    "user"     : "CAWGahPJsS",
+    "password" : "R5aIzNwZ38",
+    "port"     : 3306,
+    "database" : "CAWGahPJsS"
+},
+{ 
+    "connectionLimit" : 100,
+    "connectTimeout"  : 3600000,
+    "acquireTimeout"  : 3600000,
+    "timeout"         : 3600000,
+    "host"     : "clariba.c3dlqtpepi3x.eu-west-1.rds.amazonaws.com",
+    "user"     : "root",
+    "password" : "12345678",
+    "port"     : 3306,
+    "database" : "clariba"
+}]

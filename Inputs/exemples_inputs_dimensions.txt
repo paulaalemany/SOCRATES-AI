@@ -1,0 +1,467 @@
+Month
+          {
+            "value": "1",
+            "synonyms": []
+          },
+          {
+            "value": "2",
+            "synonyms": []
+          },
+          {
+            "value": "3",
+            "synonyms": []
+          },
+          {
+            "value": "4",
+            "synonyms": []
+          },
+          {
+            "value": "5",
+            "synonyms": []
+          },
+          {
+            "value": "6",
+            "synonyms": []
+          },
+          {
+            "value": "7",
+            "synonyms": []
+          },
+          {
+            "value": "8",
+            "synonyms": []
+          },
+          {
+            "value": "9",
+            "synonyms": []
+          },
+          {
+            "value": "11",
+            "synonyms": []
+          },
+          {
+            "value": "12",
+            "synonyms": []
+          },
+          {
+            "value": "10",
+            "synonyms": []
+          },
+
+
+
+
+Year
+          {
+            "value": "2017",
+            "synonyms": []
+          },
+          {
+            "value": "2018",
+            "synonyms": []
+          },
+          {
+            "value": "2019",
+            "synonyms": []
+          },
+
+
+
+
+Employee
+          {
+            "value": "Jose Rogríguez",
+            "synonyms": []
+          },
+          {
+            "value": "Judith Esteve",
+            "synonyms": []
+          },
+          {
+            "value": "Frank White",
+            "synonyms": []
+          },
+          {
+            "value": "Steve Blue",
+            "synonyms": []
+          },
+          {
+            "value": "Hugo Green",
+            "synonyms": []
+          },
+          {
+            "value": "Laura Montoya",
+            "synonyms": []
+          },
+          {
+            "value": "Daniel Pérez",
+            "synonyms": []
+          },
+          {
+            "value": "Ricard Johnson",
+            "synonyms": []
+          },
+          {
+            "value": "Jose Blanco",
+            "synonyms": []
+          },
+          {
+            "value": "Sergio García",
+            "synonyms": []
+          },
+          {
+            "value": "David García",
+            "synonyms": []
+          },
+          {
+            "value": "David Gonzalez",
+            "synonyms": []
+          },
+          {
+            "value": "Joselito Gutierrez",
+            "synonyms": []
+          },
+          {
+            "value": "Jose Antonio Rodriguez",
+            "synonyms": []
+          },
+          {
+            "value": "Maria Jose Cospedal",
+            "synonyms": []
+          },
+          {
+            "value": "Paula Alemany",
+            "synonyms": []
+          },
+
+
+Country
+          {
+            "value": "Brazil",
+            "synonyms": []
+          },
+          {
+            "value": "Canada",
+            "synonyms": []
+          },
+          {
+            "value": "Catalonia",
+            "synonyms": []
+          },
+          {
+            "value": "France",
+            "synonyms": []
+          },
+          {
+            "value": "UK",
+            "synonyms": []
+          },
+          {
+            "value": "Russia",
+            "synonyms": []
+          },
+          {
+            "value": "China",
+            "synonyms": []
+          },
+          {
+            "value": "Congo",
+            "synonyms": []
+          },
+          {
+            "value": "Mexico",
+            "synonyms": []
+          },
+          {
+            "value": "Christmas Island",
+            "synonyms": []
+          },
+          {
+            "value": "Germany",
+            "synonyms": []
+          },
+          {
+            "value": "Iceland",
+            "synonyms": []
+          },
+
+
+
+
+Customer
+          {
+            "value": "Antojos Leon",
+            "synonyms": []
+          },
+          {
+            "value": "Apólito Salsa",
+            "synonyms": []
+          },
+          {
+            "value": "Bustos Seguridad",
+            "synonyms": []
+          },
+          {
+            "value": "Cableado Lavado",
+            "synonyms": []
+          },
+          {
+            "value": "Diverfácil",
+            "synonyms": []
+          },
+          {
+            "value": "Diversano",
+            "synonyms": []
+          },
+          {
+            "value": "EL LOCO PINTURERIA",
+            "synonyms": []
+          },
+          {
+            "value": "EL QUINTO SENTIDO",
+            "synonyms": []
+          },
+          {
+            "value": "Fonseca Propiedades",
+            "synonyms": []
+          },
+          {
+            "value": "Foto Herrera",
+            "synonyms": []
+          },
+          {
+            "value": "Talampaya",
+            "synonyms": []
+          },
+          {
+            "value": "Timotea",
+            "synonyms": []
+          },
+          {
+            "value": "Toas",
+            "synonyms": []
+          },
+          {
+            "value": "Devopia",
+            "synonyms": []
+          },
+          {
+            "value": "Eijo",
+            "synonyms": []
+          },
+          {
+            "value": "Mypoint",
+            "synonyms": []
+          },
+          {
+            "value": "Média monde",
+            "synonyms": []
+          },
+          {
+            "value": "PC spécialiste",
+            "synonyms": []
+          },
+          {
+            "value": "Photos Maurice",
+            "synonyms": []
+          },
+          {
+            "value": "Photowire",
+            "synonyms": []
+          },
+          {
+            "value": "Skyjo",
+            "synonyms": []
+          },
+          {
+            "value": "Top GSM",
+            "synonyms": []
+          },
+          {
+            "value": "Électique Mathiev",
+            "synonyms": []
+          },
+          {
+            "value": "Arnau Gris",
+            "synonyms": []
+          },
+          {
+            "value": "Josep Tarradelles",
+            "synonyms": []
+          },
+          {
+            "value": "Lluis Companys",
+            "synonyms": []
+          },
+          {
+            "value": "Carles Puigdemont",
+            "synonyms": []
+          },
+          {
+            "value": "Nestle",
+            "synonyms": []
+          },
+
+
+
+
+Industry
+          {
+            "value": "Construction",
+            "synonyms": []
+          },
+          {
+            "value": "Manufacturing",
+            "synonyms": []
+          },
+          {
+            "value": "Wholesale trade",
+            "synonyms": []
+          },
+          {
+            "value": "Professional, scientific and technical services",
+            "synonyms": []
+          },
+          {
+            "value": "Financial Services",
+            "synonyms": []
+          },
+          {
+            "value": "Health",
+            "synonyms": []
+          },
+
+
+Territory
+          {
+            "value": "Sao Paulo",
+            "synonyms": []
+          },
+          {
+            "value": "Campinas",
+            "synonyms": []
+          },
+          {
+            "value": "Rio de Janeiro",
+            "synonyms": []
+          },
+          {
+            "value": "Rio Grande do Sul",
+            "synonyms": []
+          },
+          {
+            "value": "Brasília",
+            "synonyms": []
+          },
+          {
+            "value": "Ribeirão Preto",
+            "synonyms": []
+          },
+          {
+            "value": "Rio Grande do Norte",
+            "synonyms": []
+          },
+          {
+            "value": "Minas Gerais",
+            "synonyms": []
+          },
+          {
+            "value": "Parana",
+            "synonyms": []
+          },
+          {
+            "value": "Waterloo",
+            "synonyms": []
+          },
+          {
+            "value": "Quebec",
+            "synonyms": []
+          },
+          {
+            "value": "British Columbia",
+            "synonyms": []
+          },
+          {
+            "value": "Ontario",
+            "synonyms": []
+          },
+          {
+            "value": "Nova Scotia",
+            "synonyms": []
+          },
+          {
+            "value": "Moscu",
+            "synonyms": []
+          },
+          {
+            "value": "St. Petesburg",
+            "synonyms": []
+          },
+		  {
+            "value": "Ohio",
+            "synonyms": []
+          },
+		  {
+            "value": "Illinois",
+            "synonyms": []
+          },
+		  {
+            "value": "New York",
+            "synonyms": []
+          },
+		  {
+            "value": "California",
+            "synonyms": []
+          },
+		  {
+            "value": "Pekin",
+            "synonyms": []
+          },
+		  {
+            "value": "Taiwan",
+            "synonyms": []
+          },
+		  {
+            "value": "Macao",
+            "synonyms": []
+          },
+		  {
+            "value": "Barcelona",
+            "synonyms": []
+          },
+		  {
+            "value": "Girona",
+            "synonyms": []
+          },
+		  {
+            "value": "Lleida",
+            "synonyms": []
+          },
+		  {
+            "value": "Tarragona",
+            "synonyms": []
+          },
+		  {
+            "value": "Baviera",
+            "synonyms": []
+          },
+		  {
+            "value": "Paris",
+            "synonyms": []
+          },
+		  {
+            "value": "Touluse",
+            "synonyms": []
+          },
+		  {
+            "value": "Lyon",
+            "synonyms": []
+          },
+		  {
+            "value": "Berlin",
+            "synonyms": []
+          },
+		  {
+            "value": "Sajonia",
+            "synonyms": []
+          },

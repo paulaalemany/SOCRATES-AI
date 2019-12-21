@@ -1,0 +1,111 @@
+# First, indicate how many inputs we want to create, and then create the structures of the inputs.
+# Example structure: *["percentageNumberOfSentencesWithThisStructure"] ~["name_context"(if ? then optional)] @["name_slot"(if ? then optional)]
+%[inputs]('training': '6000', 'testing': '600')
+    *[3%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Country?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[3%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Country?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Customer?] @[Country?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Country?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Customer?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Country?] @[Customer?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Customer?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Employee_Responsible?] @[Country?] @[Month?] @[Year?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Country?] @[Territory?] @[Month?] @[Year?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Month?] @[Year?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Country?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Industry?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Customer?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Industry?] @[Territory?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Employee_Responsible?] @[Country?] @[Month?] @[Year?] @[Industry?] @[Territory?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Industry?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Industry?] @[Territory?] @[Month?] @[Year?] @[Employee_Responsible?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Month?] @[Year?] @[Customer?] @[Employee_Responsible?] @[Territory?] @[Industry?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Month?] @[Country?] @[Year?] @[Industry?] @[Employee_Responsible?] @[Customer?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Country?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Industry?] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Employee_Responsible?] @[Territory?] @[Country?] @[Month?] @[Year?] @[Industry?] @[Customer?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Territory?] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] @[Industry?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] @[Country?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Industry?] @[Employee_Responsible?] @[Month?] @[Year?] @[Country?] @[Territory?]
+    *[2%] ~[hi?] ~[please?] ~[say?] ~[deals] ~[won] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?] @[Employee_Responsible?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] ~[deals] ~[won] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?] @[Employee_Responsible?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] ~[deals] ~[won] @[Month?] @[Year?] @[Territory?] @[Country?] @[Employee_Responsible?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Country?] @[Industry?] @[Month?] @[Year?] ~[deals] ~[won] @[Employee_Responsible?] @[Customer?] @[Territory?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Industry?] @[Country?] @[Month?] @[Year?] @[Employee_Responsible?] ~[deals] ~[won] @[Territory?] @[Customer?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Employee_Responsible?] @[Territory?] @[Country?] @[Month?] @[Year?] @[Industry?] ~[deals] ~[won] @[Customer?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Territory?] @[Month?] @[Year?] @[Employee_Responsible?] @[Customer?] ~[deals] ~[won] @[Industry?] @[Country?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Country?] @[Territory?] ~[deals] ~[won]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Employee_Responsible?] @[Territory?] ~[deals] ~[won] @[Country?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Employee_Responsible?] @[Month?] @[Year?] @[Country?] ~[deals] ~[won] @[Territory?]
+    *[3%] ~[hi?] ~[please?] ~[say?] @[Customer?] @[Industry?] @[Month?] @[Year?] @[Territory?] @[Country?] ~[deals] ~[won] @[Employee_Responsible?]
+
+# Second, put some synonims for each block. 
+
+~[please]
+    please
+    pls
+
+~[say]
+    say
+    tell
+    get
+    show
+
+@[Country]('entity': 'location')
+    in
+
+@[Month]
+    in
+
+@[Year]
+    in
+
+@[Customer]
+    to the customer
+    to customer
+    for customer
+    for the customer
+    for
+    to
+
+@[Employee_Responsible]
+    by the employee
+    by
+    by employee
+    for the employee
+    of the employee
+    for
+
+@[Industry]
+    in the
+
+@[Territory]
+    in
+
+~[deals]
+    deals
+    agreement
+    transaction
+    treatment
+    acordance
+    accord
+
+~[won]
+    win
+    won
+    have won
+    have earned
+    earned
+    earn
+    gain
+
+~[Brasil]('synonym': 'true')
+    brasil
+    br
