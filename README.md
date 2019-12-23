@@ -6,7 +6,7 @@ Description: Chatbot ...
 
 ## Inputs
 
-Description: Inputs ...
+In the "Inputs" folder we find all the part of generating inputs to train AWS. Inside this folder is explained in more detail.
 
 ## AmazonLEX
 
