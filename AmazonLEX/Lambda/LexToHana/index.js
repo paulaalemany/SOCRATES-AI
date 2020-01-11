@@ -45,6 +45,7 @@ function process_dimensions(slots){
         }
         else filter_string += (' and Year eq ');
         filter_string += Year;
+    }
     return filter_string;
 }
 
@@ -105,6 +106,27 @@ function sendKPI(values)
     }, function(error, response, body){
         if(error)
             throw error;
+
+    });
+}
+
+/**
+ * Consulta de la base de datos 
+ * @param {JSON} values Valores de la consulta
+ */
+function receiveSug(values)
+{    
+    console.log("entro en sugernecias")
+    var request = require("request"); 
+    request.get({
+    headers: {'content-type' : 'application/json'},
+    url:     'http://vps764501.ovh.net:3000/rcmnd',
+    body:    values,
+    json: true
+    }, function(error, response, body){
+        if(error)
+            throw error;
+        console.log(`body sugerencia: ${body.results[0]}`);
     });
 }
 
@@ -128,6 +150,7 @@ function dispatch(intentRequest, callback) {
         postman_request(KPI, slots, function (results) {
             var reqResponse = results;
             console.log(reqResponse);
+            receiveSug(values);
             if (reqResponse != null) {
                 callback(close(sessionAttributes, 'Fulfilled',
                 {'contentType': 'PlainText', 'content': `Result: ${reqResponse} `}));
