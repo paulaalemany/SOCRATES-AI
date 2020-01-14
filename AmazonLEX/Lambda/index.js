@@ -1,7 +1,6 @@
-//const sugerencias = require('./sugerencias');
 'use strict';
 
-
+// Post-procesa los slots para que sean válidos cuando hagamos la requests a HANA
 function process_dimensions(slots){
     var Country = slots.Country;
     var Month = slots.Month;
@@ -23,8 +22,6 @@ function process_dimensions(slots){
 
     var filter_string = new String();
     var primero = true;
-
-    console.log(slots);
 
     if (Country != null) {
         filter_string = (`﻿Country eq '${Country}'`);
@@ -49,11 +46,11 @@ function process_dimensions(slots){
     return filter_string;
 }
 
+// Envía una request a la BD de HANA con el KPI y las dimensiones que hayamos extraído de LEX
 function postman_request(KPI, slots, callback) {
     var request = require("request");
 
     var dimensions = process_dimensions(slots);
-    console.log(dimensions)
     var options = { method: 'GET',
         url: 'https://ajmac1bfe500.hana.ondemand.com/POC/service.xsodata/sales',
         qs:
@@ -70,15 +67,12 @@ function postman_request(KPI, slots, callback) {
                  Accept: '*/*',
                  Authorization: 'Basic UE9DOnBvY0ZJQjAxMjM0NTY3ODk=' } };
 
-    console.log(options);
     request(options, function (error, response, body) {
         if (error) {
-            console.log(error);
             callback(-1);
         }
         else {
             var jsonbody = JSON.parse(body);
-            console.log(`jsonbody ${jsonbody.d.results[0][KPI]}`);
             callback(jsonbody.d.results[0][KPI]);
         }
         
@@ -97,10 +91,8 @@ function close(sessionAttributes, fulfillmentState, message) {
     };
 }
 
-/**
- * Envia a la base de datos de sugerencia la nueva consulta con KPI y valores
- * @param {JSON} values Valores de la consulta
- */
+
+// Envia a la base de datos de sugerencia la nueva consulta con KPI y valores
 function sendKPI(values)
 {    
     var request = require("request"); 
@@ -119,7 +111,6 @@ function sendKPI(values)
 
 // --------------- Events -----------------------
 function dispatch(intentRequest, callback) {
-    console.log(`request received for userId=${intentRequest.userId}, intentName=${intentRequest.currentIntent.name}`);
     const sessionAttributes = intentRequest.sessionAttributes;
     const slots = intentRequest.currentIntent.slots;
     const KPI = intentRequest.currentIntent.name;
@@ -136,7 +127,6 @@ function dispatch(intentRequest, callback) {
     try {
         postman_request(KPI, slots, function (results) {
             var reqResponse = results;
-            console.log(reqResponse);
             if (reqResponse != -1) {
                 callback(close(sessionAttributes, 'Fulfilled', {'contentType': 'PlainText', 
                     'content': `Result: ${reqResponse} `

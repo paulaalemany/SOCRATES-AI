@@ -1,7 +1,6 @@
-//const sugerencias = require('./sugerencias');
 'use strict';
 
-
+// Post-procesa los slots para que sean válidos cuando hagamos la requests a HANA
 function process_dimensions(slots){
     var Country = slots.Country;
     var Month = slots.Month;
@@ -23,8 +22,6 @@ function process_dimensions(slots){
 
     var filter_string = new String();
     var primero = true;
-
-    console.log(slots);
 
     if (Country != null) {
         filter_string = (`﻿Country eq '${Country}'`);
@@ -49,11 +46,11 @@ function process_dimensions(slots){
     return filter_string;
 }
 
+// Envía una request a la BD de HANA con el KPI y las dimensiones que hayamos extraído de LEX
 function postman_request(KPI, slots, callback) {
     var request = require("request");
 
     var dimensions = process_dimensions(slots);
-    console.log(dimensions)
     var options = { method: 'GET',
         url: 'https://ajmac1bfe500.hana.ondemand.com/POC/service.xsodata/sales',
         qs:
@@ -70,15 +67,12 @@ function postman_request(KPI, slots, callback) {
                  Accept: '*/*',
                  Authorization: 'Basic UE9DOnBvY0ZJQjAxMjM0NTY3ODk=' } };
 
-    console.log(options);
     request(options, function (error, response, body) {
         if (error) {
-            console.log(error);
             callback(-1);
         }
         else {
             var jsonbody = JSON.parse(body);
-            console.log(`jsonbody ${jsonbody.d.results[0][KPI]}`);
             callback(jsonbody.d.results[0][KPI]);
         }
         
@@ -97,10 +91,8 @@ function close(sessionAttributes, fulfillmentState, message) {
     };
 }
 
-/**
- * Envia a la base de datos de sugerencia la nueva consulta con KPI y valores
- * @param {JSON} values Valores de la consulta
- */
+
+// Envia a la base de datos de sugerencia la nueva consulta con KPI y valores
 function sendKPI(values)
 {    
     var request = require("request"); 
@@ -117,7 +109,7 @@ function sendKPI(values)
 }
 
 
-
+// Recive la lista de sugerencias que nos retorne el sistema
 function getSug(callback)
 {    
     var request = require("request");
@@ -126,8 +118,6 @@ function getSug(callback)
             throw error;
         else {
             var jsonbody = JSON.parse(body);
-            console.log("posibles sugerencias");
-            console.log(jsonbody.result);
             callback(jsonbody.result);
         }
     });
@@ -138,15 +128,12 @@ function getSug(callback)
 function dispatch(intentRequest, callback) {
     const sessionAttributes = intentRequest.sessionAttributes;
     const slots = intentRequest.currentIntent.slots;
-    console.log(intentRequest);
     try {
 
         if (slots.Index == null) {
             //Debemos ir a buscar la sugerencia
-            console.log("No tengo index, te lo tengo que preguntar");
             getSug(function(suggestion) {
                 if (suggestion.length == 0 || suggestion == undefined) { //No ha encontrado sugerencia. Motivos: Tiempo o no vista anterioremente
-                    console.log("No he encontrado sugerencias que retornar");
                     callback(close(sessionAttributes, 'Fulfilled', {'contentType': 'PlainText', 
                         'content': "Sorry, we don't have any suggestion right now :("
                     }));
@@ -154,11 +141,9 @@ function dispatch(intentRequest, callback) {
                 else { //Retornamos "lista de sugerencias"
                     var list = "If you want to receive the result of one listened suggestion, introduce his index (1, 2, ...). Otherwise 0 \n";
 
-                    console.log(suggestion);
                     suggestion.forEach(function(currentValue, index) {
                         
                         list += "\n ";
-                        console.log(currentValue);
                         list += (index+1 + ". Value of kpi: " + currentValue.kpi + " ");
 
                         if (currentValue.country != null) {
@@ -170,7 +155,6 @@ function dispatch(intentRequest, callback) {
                         if (currentValue.year != null) {
                             list += ("with Year: " + currentValue.year + " ");
                         }
-                        console.log(list);
                     });
 
                     callback( 
@@ -195,18 +179,14 @@ function dispatch(intentRequest, callback) {
             //Debemos consultar a Hana con el índice que nos haya pasado el usuario
             var index = slots.Index - 1;
             if (index == -1) {
-                console.log("No le ha interesado nada de la lista mostrada");
                 callback(close(sessionAttributes, 'Fulfilled', {'contentType': 'PlainText', 
                             'content': "We are sorry for that :("
                     }));
             }
             else {
-                console.log("Nos ha pasado el indice");
                 getSug(function(suggestion) {
                     var values2 = { Month: suggestion[index].month || null, Year: suggestion[index].year || null, Country: suggestion[index].country || null };
                     postman_request(suggestion[index].kpi, values2, function (results) {
-                        console.log("final results");
-                        console.log(results);
 
                         callback(close(sessionAttributes, 'Fulfilled', {'contentType': 'PlainText', 
                             'content': `Result for this suggestion: ${results}`
