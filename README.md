@@ -4,7 +4,7 @@
 
 SOCRATES-AI: Project developed in PAE subject at FIB-UPC. 
 
-Authors:
+Authors:\
 	- Paula Alemany i Vergé\
 	- Sergio García Turón\
 	- David González Marchante\
