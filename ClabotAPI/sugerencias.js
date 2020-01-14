@@ -1,10 +1,17 @@
 const mysql = require('mysql');
 const config = require('./config.json');
-const conec = 0; // 0 es la externa y 1 es la de amazon.
+const conec = 0; // 0 es la externa, 1 es la interna y 2 es la de amazon.
 var contra = '1234';
+
+var lastHist;
 
 var dbPool  = mysql.createPool(config[conec]
 );
+
+function capitaliza(string)
+{
+  //TODO: Capitalizar la primera letras y minuscula el resto, si tiene espacio no tocarlo
+}
 
 /**
  * Lanza la querry especificada y retorna el resultado en el callback.
@@ -100,6 +107,7 @@ module.exports = {
       //Agrego al historial
       values.tmp = new Date();
       query('INSERT INTO historial SET '+mysql.escape(values)+';',function(){});
+      lastHist = values;
 
       //Actualizo relaciones
       var date = values.tmp;
@@ -168,15 +176,66 @@ module.exports = {
    * Función syncrona que invoca el historial de una hora anterior a partir de una fecha. Usar como getHist(date, function(result){ CONTENIDO DE LA FUNCIóN });
    * @param {Date} date Integer, fecha limite a la que filtrar los datos o -1 para usar la fecha actual.
    * @param {Function} callback Función de callback sobre la que retornar el resultado.
+   * @param {number} time Tiempo total que va a mirar en horas, por defecto 1.
    */
-  getHist: function(date = -1, callback){
+  getHist: function(date = -1, time=1, callback = function(results){console.log("Missing callback function on a getHist call.");}){
     if(date == -1){date = new Date();}
     else{date = new Date(date);}
     var date2 = new Date(date);
-    date2.setHours(date.getHours()-1);
-      query("SELECT * FROM historial WHERE tmp < "+mysql.escape(date)+" AND "+mysql.escape(date2)+" < tmp;",function(results) {
+    date2.setHours(date.getHours()-time);
+      query("SELECT * FROM historial WHERE tmp < "+mysql.escape(date)+" AND "+mysql.escape(date2)+" < tmp  ORDER BY tmp DESC;",function(results) {
         callback(results);
       });
-
+  },
+  /**
+   * Devuelve información del estado.
+   * @param {Function} callback 
+   */
+  getStatus: function(callback = function(results){console.log("Missing callback function on a getStatus call.");})
+  {
+    console.log(dbPool._freeConnections);
+    var results = 
+    {
+      totales: dbPool.config.connectionLimit,     // passed in max size of the pool
+      libres: dbPool._freeConnections.length,    // number of free connections awaiting use
+      creadas: dbPool._allConnections.length,     // number of connections currently created, including ones in use
+      adquiriendose: dbPool._acquiringConnections.length // number of connections in the process of being acquired
+    };
+    callback(results);
+  },
+  /**
+   * Devuelve las recomendaciones de la última consulta guardada en el historial.
+   * @param {Function} callback 
+   */
+  getLastRecomend: function(callback = function(results){console.log("Missing callback function on a getLastRecomend call.");})
+  {
+    if(lastHist == null)
+    {
+      var mythis = this;
+      this.getHist(-1,100,function(results){
+        lastHist = results[0];
+        var values = {
+          kpiA : lastHist.kpi, 
+          countryA: lastHist.country,
+          monthA: lastHist.month,  
+          yearA: lastHist.year, 
+        };
+        mythis.getSug(values, function(results){
+          callback(results, lastHist);
+        });
+      })
+    }
+    else
+    { 
+      var values = {
+        kpiA : lastHist.kpi, 
+        countryA: lastHist.country,
+        monthA: lastHist.month,  
+        yearA: lastHist.year, 
+      };
+      this.getSug(values, function(results){
+        callback(results, lastHist)
+      });
+    }
   }
 }

@@ -10,6 +10,14 @@
     "port"     : 3306,
     "database" : "CAWGahPJsS"
 },
+{
+    "connectionLimit" : 30,
+    "host"     : "localhost",
+    "user"     : "CAWGahPJsS",
+    "password" : "R5aIzNwZ38",
+    "port"     : 3306,
+    "database" : "Clariba"
+},
 { 
     "connectionLimit" : 100,
     "connectTimeout"  : 3600000,
