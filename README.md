@@ -32,6 +32,10 @@ Inside Lambda you will select or create a role with the proper permissions and m
 
 To be able to execute this lambda function you will need definde a new role of execution including some policies (permissions). The included role in the screenshot is a bad security example, we just add all that we need to run tests without problems.
 
+***Available input/output formats described on this link:***
+
+https://docs.aws.amazon.com/lex/latest/dg/lambda-input-response-format.html
+
 ![Screenshot](/AmazonLEX/images/rol.png)
 
 Inside LEX there are 3 sections: Bots, Intents and Slots. If we begin, then we have to create a bot from 0. If not (as this case) you can import an implemented bot included in /AmazonLEX/Bot. 
@@ -56,6 +60,8 @@ Once inside the bot, at the left you have a column with your intents and slots j
 ![Screenshot](/AmazonLEX/images/Sample_utterances.png)
 ![Screenshot](/AmazonLEX/images/slot_description.png)
 
+***To integrate the bot developed in Amazon Lex with slack follow the steps described in this link:***
+https://docs.aws.amazon.com/lex/latest/dg/slack-bot-association.html
 
 
 ## ClabotAPI  
